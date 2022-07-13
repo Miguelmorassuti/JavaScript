@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiros passos com DOM</title>
+
+    <style>
+        body {
+            background-color: rgb(58, 199, 199);
+            color: white;
+            font: normal 1.2em Arial, sans-serif;
+        }
+    </style>
+
+</head>
+<body>
+    <h1 id = "principal">Iniciando os estudos com DOM</h1>
+    <p id = "msg">Aqui vai o resultado</p>
+    <p>Aprendendo a usar <strong>DOM</strong> em JavaScript </p>
+    <div>Clique em mim</div>
+
+    <script>
+        var corpo = window.document.body //Corpo recebeu a tag <body>
+        var p1 = window.document.getElementsByTagName("p")[1] //p1 recebeu via seletor de tag por nome, a tag <p> onde ela aparece pela primeira vez
+
+        var idx = window.document.getElementById("msg") //idx recebeu dados onde o id == msg (posso fazer com class tmb)
+
+        var tit1 = window.document.querySelector('h1#principal') //querySelector, +RECOMENDANDA PARA USAR  no parametro declaramos igual no style
+
+        window.document.write("RESULTADO = " + p1.innerText)
+         //Puxa so o texto
+
+        window.document.write("<br>RESULTADO = " + p1.innerHTML) 
+        //Puxa tmb as tags envolvidas no texto como a <strong>
+
+        p1.style.color = "yellow" //Mudando atributo da var q representa <p>[0]
+        corpo.style.backgroundColor = "black"
+        idx.style.color = "orange"
+        tit1.style.background = "blue"
+    </script>
+</body>
+</html>
