@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos DOM</title>
+
+    <style>
+        div#area{
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: rgb(41, 192, 41);
+            color: white;
+            width: 200px;
+            height: 200px;
+            line-height: 200px;
+            text-align: center;
+        }
+    </style>
+
+</head>
+<body>
+    <!-- 2° FORMA DE  TRBALHAR COM FUNÇÕES!)-->
+    <div id="area">
+        apareca
+    </div>
+    
+    <script>
+        //Variável que recebe o estado da DIV 
+        var a = window.document.getElementById("area")
+
+        //Quando ocorrer o click a função clicar é acionada
+        a.addEventListener("click", clicar) 
+        //Quando o mouse entrar na area a função é acionada
+        a.addEventListener("mouseenter", entrar)
+        //Quando o mouse sair da area a função é acionada
+        a.addEventListener("mouseout", sair)
+
+        //Funções
+        function clicar(){            
+            a.innerText = 'Clicou'
+            a.style.background = 'red'
+        }
+
+        function entrar(){
+            a.innerText = 'entrou'
+        }
+
+        function sair(){
+            a.innerText ='saiuu'
+            a.style.background = 'green'
+        }
+
+    </script>
+</body>
+</html>
