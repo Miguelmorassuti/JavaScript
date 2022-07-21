@@ -18,6 +18,7 @@ section{
     margin: auto;
     width: 500px;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.438);
+    text-align: center;
 }
 
 footer{
