@@ -4,7 +4,8 @@ meuDic.set('saudar', 'eai cara belezann?') //colocando no dicionario
 meuDic.set('adeus', 'Ate a próxima amigão') //Primeiro a chave, dps o valor
 meuDic.set('fiufiu', 'seu pai é padeiro? pq ele fez vc que é um sonho meu')
 
-const palavra = meuDic.get('fiufiu')
+
+const palavra = meuDic.get('fiufiu')//aparece undefined caso a palavra n exista
 console.log(palavra)
 
 //deletando pela chave (caso a chave n exista, o programa retorna 'false')
@@ -23,6 +24,11 @@ meuDic.forEach((valor, chave) => {
 //verificando a quantidade de elementos do dic
 console.log(`\no dicionaro possui ${meuDic.size} elementos\n`)
 
+//printando todas as entradas utilizando o .entries
+for (let entrada of meuDic.entries()){
+    console.log(entrada)
+}
+
 //printando as chaves
 for (let id of meuDic.keys()){
     console.log(id)
@@ -33,4 +39,3 @@ for (let num of meuDic.values()){
     console.log(num)
 }
 
-meuDic.
