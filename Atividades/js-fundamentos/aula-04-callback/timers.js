@@ -10,6 +10,9 @@ const logCalled = () =>{
 setTimeout(() =>{
      logCalled()
 }, 1000) //Tempo em milisegundos q indicam qto tempo dps a função sera executada
+
+Existe tmb a função clearTimeOut para fazer a verificação e parar a execução do intervalo
+clearTimeOut(nome da variavel que possui a execução do intervalo)
 */
 /*-----------------------------------------------------------------
 // setTimeout(() =>{
@@ -33,4 +36,4 @@ const intervalId = setInterval(() =>{
 
 setTimeout(() =>{
     clearInterval(intervalId)
-},5000)
+},5000) //Depois de 5000 milisegundos a função clearInterval ira apagar o prosseguimento da função setInterval
